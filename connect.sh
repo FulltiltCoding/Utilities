@@ -14,7 +14,7 @@ apt update && apt full-upgrade -y
 snap refresh
 
 # install development software
-apt install open-vm-tools-desktop build-essential git-all htop neofetch chromium-browser nodejs npm
+apt install open-vm-tools-desktop build-essential git-all htop neofetch chromium-browser nodejs npm -y
 npm install -g typescript
 echo "NodeJS Version $(node -v)"
 echo "NPM Version $(npm -v)"
