@@ -65,3 +65,10 @@ if [ -L $GUEST_SYMLINK ];
 fi
 
 echo "Complete. Your Host directory can be accessed at $GUEST_SYMLINK"
+
+gsettings set org.gnome.desktop.interface clock-format '12h'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
+update-alternatives --install /usr/bin/x-www-browser x-www-browser /snap/bin/chromium 200
+xdg-settings set default-web-browser chromium-browser.desktop
+
