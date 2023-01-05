@@ -15,12 +15,26 @@ snap refresh
 
 # install development software
 apt install open-vm-tools-desktop build-essential git-all htop neofetch chromium-browser nodejs npm curl -y
-npm install -g typescript
-curl -L https://aka.ms/linux-arm64-deb > code.deb
-dpkg -i code.dev
+
+# install TypeScript
+if ! [ $(command -v tsc) ];
+	then
+		npm install -g typescript
+  	else
+  		echo "TypeScript installed $(tsc -v)"
+fi
+
+# install Visual Studio Code
+if ! [ $(command -v code) ]; then
+  curl -L https://aka.ms/linux-arm64-deb > code.deb
+  dpkg -i code.deb
+  else
+  echo "VS Code is installed"
+fi
+
 echo "NodeJS Version $(node -v)"
 echo "NPM Version $(npm -v)"
-echo "TypeScript Version $(tsc -v)"
+echo "TypeScript $(tsc -v)"
 
 # clean up
 apt autoremove -y
