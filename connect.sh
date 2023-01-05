@@ -8,7 +8,7 @@
 # ===========================================
 
 # updates apt packages
-apt update && apt install -y
+apt update && apt full-upgrade -y
 
 # updates snap packages
 snap refresh
