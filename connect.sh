@@ -1,13 +1,32 @@
 #!/bin/bash
 
-# ABOUT ==============================
 # For VMware Fusion 13. This is only to be executed on a GUEST linux OS.
 # No warranty, use at your own will.
 
-# USAGE ==============================
-# copy file to root of home directory
-# sudo chmod +x connect.sh
-# sudo ./connect.sh
+# ===========================================
+# Install All Updates========================
+# ===========================================
+
+# updates apt packages
+apt update && apt install -y
+
+# updates snap packages
+snap refresh
+
+# install development software
+apt install open-vm-tools-desktop build-essential git-all htop neofetch chromium-browser nodejs npm
+npm install -g typescript
+echo "NodeJS Version $(node -v)"
+echo "NPM Version $(npm -v)"
+echo "TypeScript Version $(tsc -v)"
+
+# clean up
+apt autoremove -y
+
+# ===========================================
+# Setup Fusion Shared Folders================
+# ===========================================
+# ***** open-vm-tools-desktop required ******
 
 # does the hgfs dir even exist?
 DIR=/mnt/hgfs
