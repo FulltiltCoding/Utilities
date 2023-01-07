@@ -1,4 +1,5 @@
 # ~/.zshrc customization for PROMPT
+# Make your MacOS Terminal look like Kali Linux
 # On MacOS Ventura, copy this file to ~/
 # Inspired by Kali Linux
 
