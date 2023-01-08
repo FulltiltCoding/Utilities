@@ -10,6 +10,11 @@
 
 clear
 
+if (( $EUID != 0 )); then
+    echo "Please run as sudo. eg. sudo ./lobster"
+    exit
+fi
+
 # updates apt packages
 apt update && apt full-upgrade -y
 
