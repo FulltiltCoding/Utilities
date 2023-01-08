@@ -92,5 +92,8 @@ fi
 echo "Complete. Your Host directory can be accessed at $GUEST_SYMLINK"
 
 #gsettings set org.gnome.shell favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed s/.$//), 'firefox_firefox.desktop']"
+#gsettings set org.gnome.desktop.interface icon-theme 'Yaru'
+#gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
 #gsettings set org.gnome.desktop.interface clock-format '12h'
+#gsettings set org.gnome.desktop.interface text-scaling-factor '1.25'
 #gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
