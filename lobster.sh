@@ -10,6 +10,7 @@
 
 clear
 
+# check for sudo user
 if (( $EUID != 0 )); then
     echo "Please run as sudo. eg. sudo ./lobster"
     exit
