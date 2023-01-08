@@ -1,11 +1,14 @@
 #!/bin/bash
 
-# For VMware Fusion 13. This is only to be executed on a GUEST linux OS.
+# For VMware Fusion 13 and Lunar Lobster.
+# This is only to be executed on a GUEST linux OS.
 # No warranty, use at your own will.
 
 # ===========================================
 # Install All Updates========================
 # ===========================================
+
+clear
 
 # updates apt packages
 apt update && apt full-upgrade -y
